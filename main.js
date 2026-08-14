@@ -21,3 +21,5 @@ const audioMario = new Audio ('sound/MARIO_soung_audio_theme.mp3')
 let gameInterval = null
 
 // ----- Funções para Iniciar o Jogo -----//
+const startgame = () => {}
+pipe.classList.add('pipe-animation')
