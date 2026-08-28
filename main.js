@@ -21,5 +21,31 @@ const audioMario = new Audio ('sound/MARIO_soung_audio_theme.mp3')
 let gameInterval = null
 
 // ----- Funções para Iniciar o Jogo -----//
-const startgame = () => {}
-pipe.classList.add('pipe-animation')
+const startGame = () => {
+
+
+pipe.classList.add('pipe-animation');
+startButton.style.display = 'none';
+gameOver.style.display = 'none';
+audioStart.currentTime=0
+audioStart.play()
+
+ if (!gameInterval) {
+    
+    gameInterval = setInterval(gameLoop, 10);
+  }
+
+};
+
+// ----- Funções para Reiniciar o Jogo -----//
+
+const restartGame = () => { 
+
+pipe.classList.add('pipe-animation');
+pipe.style.left=' ';
+pipe.style,right='0'
+Mario.src='./img/mario.gif';
+Mario.style.width='150px'
+Mario.style.bottom='0'
+
+}
